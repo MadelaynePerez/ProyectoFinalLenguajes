@@ -1,0 +1,20 @@
+GRAMATICA
+
+NO TERMINALES: 
+<inicio>, <instrucciones>, <instruccion>
+
+TERMINALES:
+
+PRODUCCIONES:
+
+<INICIO> ::= <instrucciones>
+<instrucciones> ::= <instruccion><instrucciones>|epsilon
+<instruccion>::= tk_create<opcion>|<DROP>|<ALTER>|<SELECT>|<INSERT>!<UPDATE>|<DELETE>
+<opcion>::=<TABLE>|<DATABASE>
+<TABLE>::=tk_table tk_identificador tk_signos <estructuras> tk_signo tk_signo
+<estructuras>::= <estructurasDeclaracion>|<estructurasDeclaracion> tk_signo <estructuras> | epsilon 
+<estructurasDeclaracion> ::= tk_identificador <tipoDato> <opcionE>
+<opcionE>::= tk_primary tk_key | tk_not tk_null | tk_unique | epsilon
+<TipoDato>::= tk_integer| tk_varchar | tk_decimal ! tk_date | tk_text |  tk_boolean | tk_serial 
+<DATABASE>=tk_dataBase tk_identificador tk_signos
+<DROP>::=
