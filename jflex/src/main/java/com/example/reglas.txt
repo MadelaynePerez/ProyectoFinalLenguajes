@@ -1,0 +1,34 @@
+Function    > palabra reservada
++           > operadores matematicos
+-           > operadores matematicos
+*           > operadores matematicos
+/           > operadores matematicos
+[0-9]+      > numero
+
+
+
+
+12321 NUMERO
++ OPERADOR
+- OPERADOR
+123213 NUMERO
+
+"
+12321 + 
+-123213
+"
+
+12321 NUMERO FILA = 1 COLUMNA = 1
++ OPERADOR FILA = 1 COLUMNA = 7
+- OPERADOR FILA = 2 COLUMNA = 1
+123213    NUMERO FILA = 2 COLUMNA = 2
+
+
+%%
+<configuracion basica>
+%%
+<codigo java>
+%%
+<logica de tokens>
+
+{Logica} {Recuperar token}
